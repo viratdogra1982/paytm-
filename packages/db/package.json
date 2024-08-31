@@ -1,21 +1,22 @@
 {
     "name": "@repo/db",
-    "version": "0.0.0", 
-    "script":{
-        "build":"npx prisma generate && next build",
-        "postinstall":"prisma generate"
+    "version": "0.0.0",
+    "scripts": {
+      "build": "npx prisma generate",
+      "postinstall": "npx prisma generate"
     },
     "dependencies": {
-        "@prisma/client": "^5.11.0"
+      "@prisma/client": "^5.11.0"
     },
     "devDependencies": {
-        "prisma": "5.11.0",
-        "ts-node": "^10.9.1"
+      "prisma": "5.11.0",
+      "ts-node": "^10.9.1"
     },
     "exports": {
-        "./client": "./src/index.ts"
+      "./client": "./src/index.ts"
     },
     "prisma": {
-        "seed": "ts-node prisma/seed.ts"
+      "seed": "ts-node prisma/seed.ts"
     }
-}
+  }
+  
