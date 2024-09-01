@@ -2,19 +2,16 @@
   "name": "repo",
   "private": true,
   "scripts": {
-    "prebuild": "npm run db:generate",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"./*.{ts,tsx,md}\"",
-    "db:generate": "cd packages/db && npx prisma generate && cd ../..",
-    "postinstall": "npm run db:generate"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.2.5",
-    "turbo": "^2.1.1"
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=18"
@@ -25,3 +22,4 @@
     "packages/*"
   ]
 }
+
