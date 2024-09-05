@@ -1,11 +1,14 @@
 {
-  "name": "repo",
+  "name": "week-18",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:generate":"cd packages/db && npx prisma generate cd ../..",
+    "start-user-app": "npm run dev && cd ../.."
+    
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -22,4 +25,3 @@
     "packages/*"
   ]
 }
-
